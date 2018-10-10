@@ -1,0 +1,34 @@
+{
+  "name": "js-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev",
+    "clean": "rm -rf public",
+    "build": "npm run clean && mkdir public && babel src -s -d public",
+    "production": "npm run build && node bin/production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudresh30/js-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudresh30/js-api/issues"
+  },
+  "homepage": "https://github.com/rudresh30/js-api#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "express": "^4.16.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}

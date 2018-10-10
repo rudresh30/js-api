@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/app.js"],"names":["console","log","myVar"],"mappings":";;AAAA;;;;;;AAEAA,QAAQC,GAAR,eAAwBC,cAAxB","file":"app.js","sourcesContent":["import myVar from \"./test\";\n\nconsole.log(`it works ${myVar}`);"]}

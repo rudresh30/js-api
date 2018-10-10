@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/test.js"],"names":["myVar"],"mappings":";;;;;AAAA,IAAMA,QAAQ,SAAd;;kBAEeA,K","file":"test.js","sourcesContent":["const myVar = \"rudresh\";\n\nexport default myVar;"]}
