@@ -1,4 +1,5 @@
 import express from "express";
+import { addNewContact, getAllContacts, getSingleContact, updateSingleContact, deleteSingleContact } from "../controllers/controller";
 
 var router = express.Router();
 
@@ -11,23 +12,18 @@ router.use('/', (req, res, next) => {
 router.get('/', (req, res, next) => {
     console.log(`I get called on get only`);
     console.log(`i have access to req object: method is - ${req.method}`);
+
     next();
 });
 
-router.get('/', (req, res) => {
-    res.send(`GET on contact`);
-});
+router.get('/:contactId', getSingleContact);
 
-router.post('/', (req, res) => {
-    res.send(`POST on contact`);
-});
+router.get('/', getAllContacts);
 
-router.put('/:contactId', (req, res) => {
-    res.send(`PUT on contactId`);
-});
+router.post('/', addNewContact);
 
-router.delete('/:contactId', (req, res) => {
-    res.send(`DELETE on contactId`);
-})
+router.put('/:contactId', updateSingleContact);
+
+router.delete('/:contactId', deleteSingleContact);
 
 export default router;

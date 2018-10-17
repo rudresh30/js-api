@@ -26,7 +26,7 @@ app.use(express.static(staticPath));
 const dbConnectUri = 'mongodb+srv://jsapidb:mongodb123@cluster0-wolep.mongodb.net/test?retryWrites=true';
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConnectUri, {
-    useMongoClient: true
+    useNewUrlParser: true
 });
 
 
